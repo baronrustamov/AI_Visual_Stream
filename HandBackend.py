@@ -29,7 +29,7 @@ class HandDetector():
 		# img = cv2.resize(img, (800, 400), interpolation=cv2.INTER_AREA)
 		img_RGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 		self.results = self.hands.process(img_RGB)
-		# print(self.results.multi_hand_landmarks)
+		print(self.results.multi_hand_landmarks)
 
 		if self.results.multi_hand_landmarks:
 			for handLms in self.results.multi_hand_landmarks:
